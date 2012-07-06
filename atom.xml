@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[MrZhang.me]]></title>
+  <title><![CDATA[on the way]]></title>
   <link href="http://bleedfly.github.com/atom.xml" rel="self"/>
   <link href="http://bleedfly.github.com/"/>
   <updated>2012-01-20T00:00:00+08:00</updated>
   <id>http://bleedfly.github.com/</id>
   <author>
-    <name><![CDATA[wǒ_is神仙]]></name>
+    <name><![CDATA[bleedfly]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
