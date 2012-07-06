@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[MrZhang.me]]></title>
+  <link href="http://bleedfly.github.com/atom.xml" rel="self"/>
+  <link href="http://bleedfly.github.com/"/>
+  <updated>2012-01-20T00:00:00+08:00</updated>
+  <id>http://bleedfly.github.com/</id>
+  <author>
+    <name><![CDATA[wǒ_is神仙]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://bleedfly.github.com/blog/hello-world.html"/>
+    <updated>2012-07-06T15:32:00+08:00</updated>
+    <id>http://bleedfly.github.com/blog/hello-world</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
