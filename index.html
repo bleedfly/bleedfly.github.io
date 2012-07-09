@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>on the way</title>
   
-  <meta name="description" content=" Hello World 2012-07-06 Fri " />
+  <meta name="description" content="Hello World 2012-07-06 Fri 关于翻墙之windows之ssh篇 2012-02-02 Thu 这是一个严肃的话题,一直以来我致力于怎样能够摆脱gfw的控制,还我一个清新的干净的网络. windows篇 鉴于绝大多数的普通青年还在用着涂毒一代的windows系统, &hellip;" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/stylesheets/screen.css" />
   
@@ -80,6 +80,614 @@ html,body{height:100%;overflow:hidden}
 
 
   <div class="entry-content typo">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html">关于翻墙之windows之ssh篇</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-02T00:00:00+08:00" pubdate="pubdate" data-updated="true">2012-02-02 Thu</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=关于翻墙之windows之ssh篇 - &amp;url=http://bleedfly.github.com/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=关于翻墙之windows之ssh篇 - &amp;url=http://bleedfly.github.com/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=关于翻墙之windows之ssh篇 - http://bleedfly.github.com/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>这是一个严肃的话题,一直以来我致力于怎样能够摆脱gfw的控制,还我一个清新的干净的网络.</p>
+
+<p>windows篇</p>
+
+<p>鉴于绝大多数的普通青年还在用着涂毒一代的windows系统,不免需要花些功夫给大家普及下windows下面的翻墙手法.</p>
+
+<p>ssh法:</p>
+
+<p>这是一个上网翻墙的解决方案, 需要配合windows下firfox,chrome的插件来完成.</p>
+
+<p>首先需要做的是下载一个 ssh 代理软件.</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/01/MyEntunnel-3.5.2.zip">MyEntunnel 3.5.2</a></p>
+
+<p>解压开是4个文件,直接运行myentunnel.exe</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/01/ssh.jpg"><img class="alignnone size-full wp-image-43" title="ssh" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/01/ssh.jpg" alt="" /></a></p>
+
+<p>进行如下的设置：</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/4.jpg"><img class="alignnone size-full wp-image-54" title="4" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/4.jpg" alt="" /></a>
+<h1><span style="color: #ff0000;"><strong>需要用户名密码的fuckgfw/fuckgfw</strong></span></h1>
+&nbsp;</p>
+
+<p>完成了以上步骤那么你已经离翻越万里长城很近了</p>
+
+<p>接下来就要开始分浏览器作战了，如果你用的是ie，恭喜你前面你白看了，你可以直接跳到下一个vpn篇了</p>
+
+<p>firefox:</p>
+
+<p>1.按住 ctrl+shift+a 打开插件安装页面,搜索autoproxy 安装</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/3.jpg"><img class="alignnone size-full wp-image-50" title="3" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/3.jpg" alt="" /></a></p>
+
+<p>安装完后重启firefox</p>
+
+<p>2.按住 ctrl+alt+p 打开配置页面</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/1.jpg"><img class="alignnone size-full wp-image-47" title="1" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/1.jpg" alt="" /></a></p>
+
+<p>3.点击Add rule subscription 添加 gfwlist</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/6.jpg"><img class="alignnone size-full wp-image-56" title="6" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/6.jpg" alt="" /></a></p>
+
+<p>4.Choose proxy server,选择ssh -D 7070</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/7.jpg"><img class="alignnone size-full wp-image-57" title="7" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/7.jpg" alt="" /></a></p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/2.jpg"><img class="alignnone size-full wp-image-48" title="2" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/2.jpg" alt="" /></a></p>
+
+<p>5.测试，facebook、youtube，若成功，恭喜你，终于完成firefox的自由翻墙了</p>
+
+<p>chrome:</p>
+
+<p>1.到<a href="https://chrome.google.com/webstore/detail/caehdcpeofiiigpdhbabniblemipncjj?hl=zh-CN">https://chrome.google.com/webstore/detail/caehdcpeofiiigpdhbabniblemipncjj?hl=zh-CN</a> 下载Proxy Switchy! 这个插件安装。如果被墙 可以用我下载的离线版本 <a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/Proxy-Switchy_1_6_3.rar">Proxy Switchy!_1_6_3</a>
+安装后你会看到浏览器chrome的右上角多了一个小地球。</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/switch.jpg"><img title="switch" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/switch.jpg" alt="" /></a>
+2.右键小地球——选项，进行详细设置</p>
+
+<p>设置代理规则页<br />
+A）配置名称： fuckgfw（自己随便起一个）<br />
+B）选择“手动配置”<br />
+C）SOCKS 代理：127.0.0.1,端口: 7070<br />
+D）选中：“SOCKS v5”</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/switchoption2.jpg"><img class="alignnone size-full wp-image-70" title="switchoption" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/switchoption2.jpg" alt="" /></a></p>
+
+<p>3.设置Swich Rules页<br />
+A）勾选：Enable Switch Rules<br />
+B）勾选：Online Rule List<br />
+“规则列表的网站”填入：http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt （被墙网站的总列表）<br />
+“刷新时”选择：3 Hours<br />
+“代理简介”选择：fuckgfw（与上面的“配置名称”保持一致）<br />
+C）勾选：AutoProxy Compatible List<br />
+点击“Save”按钮保存，如下图所示</p>
+
+<p><a href="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/rules1.jpg"><img class="alignnone size-full wp-image-71" title="rules" src="http://bleedfly-wordpress.stor.sinaapp.com/uploads/2012/02/rules1.jpg" alt="" /></a></p>
+
+<p>4.关闭Chrome，重新打开。左键点击一下小地球，点选Auto Switch Mode（这使我们访问被墙网站总名单内的网站时他会自动用SSH翻墙浏览）。<br />
+5.测试，facebook、youtube，若成功，恭喜你，终于完成chrome下的自由翻墙了。</p>
+
+<p>ssh篇至此结束。下篇预告  关于翻墙之windows之vpn篇，敬请期待。</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/2011%E7%94%9F%E5%91%BD%E6%89%80%E4%B8%8D%E8%83%BD%E6%89%BF%E5%8F%97%E4%B9%8B%E8%BD%BB.html">2011生命所不能承受之轻</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-03T00:00:00+08:00" pubdate="pubdate" data-updated="true">2012-01-03 Tue</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=2011生命所不能承受之轻 - &amp;url=http://bleedfly.github.com/blog/2011%E7%94%9F%E5%91%BD%E6%89%80%E4%B8%8D%E8%83%BD%E6%89%BF%E5%8F%97%E4%B9%8B%E8%BD%BB.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=2011生命所不能承受之轻 - &amp;url=http://bleedfly.github.com/blog/2011%E7%94%9F%E5%91%BD%E6%89%80%E4%B8%8D%E8%83%BD%E6%89%BF%E5%8F%97%E4%B9%8B%E8%BD%BB.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=2011生命所不能承受之轻 - http://bleedfly.github.com/blog/2011%E7%94%9F%E5%91%BD%E6%89%80%E4%B8%8D%E8%83%BD%E6%89%BF%E5%8F%97%E4%B9%8B%E8%BD%BB.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>转瞬2011已逝，迟到的总结和祝福。</p>
+
+<p>2011年发生了很多事情，基本上来说已经改变了我的人生，价值观和整体的方向。</p>
+
+<p>每年的年底年初都会去总结下过去的一年，展望下未来的方向，今年也是不免俗的一次。</p>
+
+<p>2011年，做了很多可能会改变一生的决定和被决定。工作上，换了一个部门，从一帮熟悉的人群到达一个不熟悉的群体，整体的框架总算有了个比较好的开始。生活上买了人生的第一座房子，单身了，终于拿到了驾照，学会了自己一个人做很多很多的事情。</p>
+
+<p>2011是转变之年，曾经有一段的时间特别的迷茫，找不到前进的方向，工作感情上的双挫折差点让人崩溃。之后的不断的沉思和不断的长大，让我感觉一瞬间的成长，知道了自己想要生活和努力到达的方向。</p>
+
+<p>2012年是转折之年，希望能够完成化蝶的过程。</p>
+
+<p>1.读透5本书，技术类的3本，非技术类的2本</p>
+
+<p>2.每2周爬一次山，感受一下大自然的清新</p>
+
+<p>3.至少减到120斤</p>
+
+<p>4.在生日的时候给自己买辆车作为自己送自己的礼物</p>
+
+<p>5.每周能够写一篇日记或者技术总结</p>
+
+<p>6.爸爸妈妈们依旧能够健康快乐，给于亲人一定程度上的温暖，经济和感情上</p>
+
+<p>7.去一趟西藏</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/2011%E5%B9%B410%E6%9C%8818%E5%8F%B7-%E6%99%B4.html">2011年10月18号 晴</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-18T00:00:00+08:00" pubdate="pubdate" data-updated="true">2011-10-18 Tue</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=2011年10月18号 晴 - &amp;url=http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%8818%E5%8F%B7-%E6%99%B4.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=2011年10月18号 晴 - &amp;url=http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%8818%E5%8F%B7-%E6%99%B4.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=2011年10月18号 晴 - http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%8818%E5%8F%B7-%E6%99%B4.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>又却是一个晴朗的天气，杭州近日来的天气好的有点过分，秋已深确是有如此的时光。早上醒来看到满目的阳光，心情出奇的好。近日来早上醒的越来越晚，6点半起床的计划，从年初到现在却是一直都没有实现过的一次。规范自己的人生却要从规范自己的作息去做起。</p>
+
+<p>到了公司又开始了不停的项目啊项目，总是有做不完的项目在我看来。感觉现在淘宝的产品越来越是不专业了，不知道天天到底在干些什么，人也是找不到的。时时变动的需求和那永远切不准的点，不知道是不是我的要求太高了有的时候不免怀疑。和猫猫聊了下投资方面的事情，确实来说猫猫这面接触的比我要多一点，可是大家都是没有比较好的项目想去运作，否定了几个方案之后，看来有些东西还是要好好的用心去思考思考的。</p>
+
+<p>中午的时光总是来的很快，小黑屋已经持续了3年了，感谢兄弟们的陪伴，也许真的有一天我要远去，我会想念你们的。中午的环境配置了许久，突然却是发现以前的一个很小的功能被删除掉了，大家却是还在傻傻的记着数据，人生啊人生。</p>
+
+<p>突然被老大拉过去的谈话，一如从前的哥哥一个人在吧啦吧啦，猛然间的醒悟，以后要好好的学习如何去倾听，而不是一个劲的在表达自己的想法，我发现自己确实是有好多的想法，可是有的时候真的是听不进别人的话，太活在了自己的世界之中，倾听，理解，包容。</p>
+
+<p>夜晚的降临，继续我的《家园》和那甜甜的草原梦，每个人心中都有那么一块纯洁的蔚蓝的天空。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/2011%E5%B9%B410%E6%9C%884%E5%8F%B7-%E6%99%B4.html">2011年10月4号 晴</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-04T00:00:00+08:00" pubdate="pubdate" data-updated="true">2011-10-04 Tue</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=2011年10月4号 晴 - &amp;url=http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%884%E5%8F%B7-%E6%99%B4.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=2011年10月4号 晴 - &amp;url=http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%884%E5%8F%B7-%E6%99%B4.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=2011年10月4号 晴 - http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%884%E5%8F%B7-%E6%99%B4.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>国庆的第四天，昨晚睡觉睡的比较晚，醒来时候已然是正午十分了。抬头望去漫天的白云，天气终于是晴朗起来了。突然想起小时候趴在桌子上面看着云彩慢慢变形的情景历历在目，不知觉的却是已经迈入的人生的第26个年头，时间总是在飞逝。以前的我肯定想不到自己现在的情形，是是非非，恩恩怨怨，一切都是命中的注定，也许在我们出生的那一刹那，人生就已经定格，我们只是在不停的重复又不停的忘却。</p>
+
+<p>如此好的阳光不是出去的话甚是浪费，随便的去逛了一下，却也是发现温度提升了，没有了前几日的冷涩。风儿拂过的脸庞，人生的一切却是一幕一幕。沏一杯茶，捧一本书，阳光下的中午，品味着别样的人生，这却是杭州没有的风景和氛围。</p>
+
+<p>不知不觉的中午却是过了大半，突然是想起那还是没有完成的周报，突然发现平时的工作却占用的人生的80%的时间，每天忙碌在公司和宿舍之间，一晃便是3年。褪去的是青涩的脸庞，棱角也是没有磨尽。也许真的是要等待到彻底圆滑的那天，才会想起那个满身的刺的自我。</p>
+
+<p>午后的时间总是充充而过，夜晚麻将却是永恒的话题，亲情的回归能给自己带来些许的温暖。</p>
+
+<p>夜已深，孤身入睡。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/2011%E5%B9%B410%E6%9C%883%E5%8F%B7-%E9%98%B4%E5%A4%A9.html">2011年10月3号 阴天</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-04T00:00:00+08:00" pubdate="pubdate" data-updated="true">2011-10-04 Tue</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=2011年10月3号 阴天 - &amp;url=http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%883%E5%8F%B7-%E9%98%B4%E5%A4%A9.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=2011年10月3号 阴天 - &amp;url=http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%883%E5%8F%B7-%E9%98%B4%E5%A4%A9.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=2011年10月3号 阴天 - http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%883%E5%8F%B7-%E9%98%B4%E5%A4%A9.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>连日的阴雨却是将国庆的气氛扫的更加的清淡了。今日的天气也却是终于不见了雨滴，虽然是没有太阳在天上，却也是生的几分的淡雅。家里的空气一如既往的好，虽然没什么云彩却是看到透彻的天空。已经连续的在家休息了2天，第三天也就顺道而来了。一直想要在国庆期间好好的思考下人生却是没有实现，产品的想法倒是如潮水般的涌来，看来我又成了工作狂人，漫无边际的发散的思维不知道何时才是能够集中在一点。</p>
+
+<p>早上又是从睡梦中惊醒，总觉的自己要抓住一些什么，可是却也永远抓住的却是空气。又去翻起了酒徒的《家园》，架空的那段隋唐历史，无边的草原梦，以及梦想破灭后的淡淡的忧伤。可惜还是太长了，不知道又是何时我才能够完全的看完。最近已经是很少有去看书的冲动，纵然是一些小说也是没有看下去的欲望。难道那个破碎的梦已经再也不能企及。行万里路，读万卷书，谈何容易。</p>
+
+<p>思量着这一生的朝朝暮暮，从何处来又该到何处去。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/%E9%9A%8F%E7%AC%94.html">2011年9月26号 天气 小雨</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-26T00:00:00+08:00" pubdate="pubdate" data-updated="true">2011-09-26 Mon</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=2011年9月26号 天气 小雨 - &amp;url=http://bleedfly.github.com/blog/%E9%9A%8F%E7%AC%94.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=2011年9月26号 天气 小雨 - &amp;url=http://bleedfly.github.com/blog/%E9%9A%8F%E7%AC%94.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=2011年9月26号 天气 小雨 - http://bleedfly.github.com/blog/%E9%9A%8F%E7%AC%94.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>发现最近已经是越睡越晚，早上已经是不知道几点才是睡着，一大早醒来迷迷糊糊的听到外面的躁动。看样子大家也都已经是去上班了，今天蛋蛋居然在9点整去上班了，实属意外。隐隐约约中听到东东的蛋疼的声音叫了我几下，然后就没有然后了。</p>
+
+<p>翻了下闹钟发现已经是9点多了，依旧是翻身了几次，恋恋不舍的爬动了起来。又是迟到的一天啊。慢悠悠的刷牙洗脸，感觉着一阵阵的惬意迎面而来，凉水却是总能清醒你自己的心绪。看着窗外淡淡的天空，慢慢的发现秋意是真的渐浓了，如同这萧索的天空。换上昨天刚买的袜子，便是踏上了上班的征途。路上的这20分钟是发现唯一的和大自然接触的机会，杭州是个绿化做的还是不错的城市，到处的公园和绿化的植被，城市环绕着山岭。很久之前一直想着每天早上去山上走上那么的一圈，一直以来却只是没有实现的想法而已。发现最近思绪飘忽的厉害，慢慢的健忘了起来，不知道是否真的是睡的太晚的缘故。</p>
+
+<p>如同隔世一般的路程，迈进那电梯的一刹那，整个人都职业了起来，回想一下今天需要做的工作。uc，项目，和接下来几个月的工作安排如同浆糊般的涌现在脑中，其实每天早上花上个10几分钟的时间做一下的时间安排会加快整个一天的工作效率。最近老是思考产品相关的东西，发自己的思维还是太发散了，一直找不到真正的切入点。人还是需要被逼出来的。</p>
+
+<p>发现最近的工作效率还是需要提高的，一直以来觉得技术才是根本，可是当你发现有各种的事情将你打断的时候我又在想如何让团队能够更有效率的运作下去。团队的整体意识是门学问，让合适的人去做合适的事情，我一直觉得一个一线的人员做的不好可能自己占有一定的关系，大部分的责任还是没有正确的去引导。如何不亲力亲为，又不脱产。</p>
+
+<p>分离了部分的任务，由于封网，相对来说大家手上的火还不算多。时间如同流水般的流逝，午饭已然来临。小黑屋已经在一起点饭快3年了，发现一个饭桌能持续这么久是原因的，个人感觉主要原因是我们大家都是太懒了，一群懒人在一起才是能够长久。</p>
+
+<p>发现现在吃饭的话题基本上离不开炮轰party和公司里面比较变态的一些事情，其实茫茫人海大家能够聚在一起是多么的不容易，也许真的的要等到离去的那天才是想起今天的朝朝暮暮。</p>
+
+<p>不知不觉的2011已经过了一大半，今年确实是人生的大转折，工作，爱情都发生的重大的改变。在不是本命年的岁月中我没有想到会有这么难，但是奉行我的一贯原则，无论多么艰难的道路也要一路向前永不回头，对错没有谁来评。</p>
+
+<p>一直以来都想好好的出去散散心，看来护照得抓紧办了。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/wordpress%E6%8A%98%E8%85%BE%E5%B0%8F%E8%AE%B0.html">Wordpress折腾小记</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-07T00:00:00+08:00" pubdate="pubdate" data-updated="true">2011-09-07 Wed</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=Wordpress折腾小记 - &amp;url=http://bleedfly.github.com/blog/wordpress%E6%8A%98%E8%85%BE%E5%B0%8F%E8%AE%B0.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=Wordpress折腾小记 - &amp;url=http://bleedfly.github.com/blog/wordpress%E6%8A%98%E8%85%BE%E5%B0%8F%E8%AE%B0.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=Wordpress折腾小记 - http://bleedfly.github.com/blog/wordpress%E6%8A%98%E8%85%BE%E5%B0%8F%E8%AE%B0.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>其实整体来说上次已经折腾过一次的wordpress，这次又死灰复燃的把。</p>
+
+<p>基于archlinux，可以节省很多不必要的编译，pacman是我用过的最好的包管理安装工具没有之一。相对于apt-get的瞎装文件，yum的不知所措，pacman算是比较轻量级别的。</p>
+
+<p>第一步是装了nginx
+<pre lang="bash">pacman -S nginx</pre>
+第二步是装上php和mysql
+<pre lang="bash">pacman -S php php-fpm mysql</pre>
+第三步是修改nginx配置使它支持php
+<pre lang="bash">sudo vim /etc/nginx/conf/nginx.conf</pre>
+<pre lang="bash">location ~ \.php$ {
+            root           /home/admin/www;
+            fastcgi_pass   unix:/var/run/php-fpm/php-fpm.sock;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include        fastcgi_params;
+        }</pre>
+修改php的配置文件
+<pre lang="bash">sudo vim /etc/php/php.ini</pre> <br />
+将 ;extension=mysql.so 前面的分号去掉<br />
+第四步配置mysql数据库<br />
+先进入mysql
+<pre lang="bash">mysql -u root -p</pre> <br />
+默认的是没有密码的直接进入
+<pre lang="bash">mysql> CREATE DATABASE blog;
+Query OK, 1 row affected (0.00 sec)
+mysql> GRANT ALL PRIVILEGES ON blog.* TO "blog"@"localhost"
+    -> IDENTIFIED BY "362323";
+Query OK, 0 rows affected (0.00 sec)
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.01 sec)</pre> <br />
+第五步下载wordpress到/home/admin/www下，可以根据你自己的喜好放<br />
+解压到当前目录,将wordpress下面所有的文件都放到/home/admin/www根目录下
+<pre lang="bash">mv /home/admin/www/wp-config-sample.php wp-config.php</pre> <br />
+修改wp-config.php
+<pre lang="bash">/** The name of the database for WordPress */
+define('DB_NAME', 'blog');</pre></p>
+
+<p>/** MySQL database username */<br />
+define(&#8216;DB_USER&#8217;, &#8216;blog&#8217;);</p>
+
+<p>/** MySQL database password */<br />
+define(&#8216;DB_PASSWORD&#8217;, &#8216;362323&#8217;);</p>
+
+<p>/** MySQL hostname */<br />
+define(&#8216;DB_HOST&#8217;, &#8216;localhost&#8217;); <br />
+第六步打开php服务，nginx服务
+<pre lang="bash">sudo rc.d start nginx
+sudo rc.d start php-fpm</pre> <br />
+最后打开host/wp-admin/index.php就开始安装了</p>
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/2003%E5%B9%B4-1%E6%9C%887%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%BA%8C-%E6%99%B4.html">2003年 1月7号 星期二 晴</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-01-07T00:00:00+08:00" pubdate="pubdate" data-updated="true">2003-01-07 Tue</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=2003年 1月7号 星期二 晴 - &amp;url=http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%887%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%BA%8C-%E6%99%B4.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=2003年 1月7号 星期二 晴 - &amp;url=http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%887%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%BA%8C-%E6%99%B4.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=2003年 1月7号 星期二 晴 - http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%887%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%BA%8C-%E6%99%B4.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>冷风呼啸着而过，带给我刺骨的寒冷，吹尽我无限的悲哀。早上醒来，天已经很是亮了，太阳没有露出脸来，空中有一些灰蒙蒙的云在飘着，混浊的空气中有着一种说不出的滋味，上早班的时间已经过去了，街显得有一些安静，偶尔飞过一辆汽车，依然消不了这满街灰沉沉的气息。远处传来几声车铃声，如同鸟儿在清晨的鸣叫，清新，悦耳，给人一种心旷神恰的感觉，这种感觉贯穿你的全身，像是微醉后那种飘飘然的意念，又像是倾听情人的声音那样的美妙。平静的心中有了一丝的涟漪，大海中的一卷波浪，草原上的一次微风。太阳出来了，以普照全世界的名义，射向大地，房子也都亮了起来，一切都宛如从地狱中一下子来到了天堂，满脸满身的喜悦，偶尔也传来几声卖东西的吆喝声，勾起了我肚子的不满，早饭没吃。</p>
+
+<p>继续闲逛，继续想象，放飞想象的翅膀，在军宇宙中遨游，然而现实的景象总有一些让我失望，不过仅此而已。</p>
+
+<p>大街上已经有了一些子的热量，空气也没有原来那么的有寒冷的味道，但冬天的风，不同于春风的温柔，夏风的凉意，秋风的萧索，给人一种特别的享受。我喜欢被冰冻的寒冷，被冰冻的感觉，我喜欢冬风，它能刺激我的精神，让我看得更远，让我想得更周到。冷，算不了什么的了，只要心中有那么一份慰藉，冷风如刀，但是更坚强我的意志。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+
+<header>
+  
+    <h1 class="entry-title"><a href="/blog/2003%E5%B9%B4-1%E6%9C%886%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%B8%80-%E6%99%B4.html">2003年 1月6号 星期一 晴</a></h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-01-06T00:00:00+08:00" pubdate="pubdate" data-updated="true">2003-01-06 Mon</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=2003年 1月6号 星期一 晴 - &amp;url=http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%886%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%B8%80-%E6%99%B4.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=2003年 1月6号 星期一 晴 - &amp;url=http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%886%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%B8%80-%E6%99%B4.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=2003年 1月6号 星期一 晴 - http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%886%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%B8%80-%E6%99%B4.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>新年来的第一篇日记，有些无从下笔的感觉，好多天都没有写日记了，可能最近比较忙。</p>
+
+<p>冷风吹打着早已没有知觉的脸庞，呼出一些带着水珠的气体，走在大街，路灯早已亮了起来，汽车的喇叭声在耳边回荡,犹如是来自地狱的音乐，冷酷，刺耳。在一片朦胧的意境中，对面马驶来一辆轿车，飞驰而过，像黑夜中的一流星划过长空留下美丽的弧一样的给我以无限的遐想。空中弥漫着一种夜的滋味，给人一种摸不透的感觉，宛如那种初尝鲜果的意境，回味无穷。两排的房屋乱七八糟的树在街旁，在灯光的交映下，像是魔鬼的脸蛋，可怕，无情。总觉得夜是无尽的，身旁有着无数的目光注视看我的行动一般，心中总是有一些不安。风很冷，但是它让我更清醒，它让我摆脱了一种飘飘然的态度，冷月，冷风，冷街，心更冷。</p>
+
+<p>像幽灵般的徘徊在一片黑夜之中，企图寻找着光明，除了路灯那些不争气的朦胧的灯光之外，便再也没些什么的了，好像离大自然很远，突然有一种想拥抱大海的意念，想呼吸一下森林的气息，聆听一下鸟儿的叫声，观赏一下花儿的绽放，享受一下阳光的抚摸&#8230;&#8230; 但是一切的一切，好像又离我太远太远了，比星空还要神秘。</p>
+
+<p>悠然，回荡在我心中的是心跳的声响，我看到的是人造景物。回归，到我来的地方去吧!</p>
 </div>
   
   
