@@ -14,15 +14,6 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://bleedfly.github.com/blog/hello-world.html"/>
-    <updated>2012-07-06T15:32:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/hello-world</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[关于翻墙之windows之ssh篇]]></title>
     <link href="http://bleedfly.github.com/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html"/>
     <updated>2012-02-02T00:00:00+08:00</updated>
