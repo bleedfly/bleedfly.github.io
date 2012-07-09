@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[on the way]]></title>
-  <link href="http://bleedfly.github.com/atom.xml" rel="self"/>
-  <link href="http://bleedfly.github.com/"/>
+  <link href="http://bleedfly.com/atom.xml" rel="self"/>
+  <link href="http://bleedfly.com/"/>
   <updated>2012-01-20T00:00:00+08:00</updated>
-  <id>http://bleedfly.github.com/</id>
+  <id>http://bleedfly.com/</id>
   <author>
     <name><![CDATA[一路向前]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于翻墙之windows之ssh篇]]></title>
-    <link href="http://bleedfly.github.com/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html"/>
+    <link href="http://bleedfly.com/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html"/>
     <updated>2012-02-02T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/关于翻墙</id>
+    <id>http://bleedfly.com/blog/关于翻墙</id>
     <content type="html"><![CDATA[<p>这是一个严肃的话题,一直以来我致力于怎样能够摆脱gfw的控制,还我一个清新的干净的网络.</p>
 
 <p>windows篇</p>
@@ -108,9 +108,9 @@ C）勾选：AutoProxy Compatible List<br />
   
   <entry>
     <title type="html"><![CDATA[2011生命所不能承受之轻]]></title>
-    <link href="http://bleedfly.github.com/blog/2011%E7%94%9F%E5%91%BD%E6%89%80%E4%B8%8D%E8%83%BD%E6%89%BF%E5%8F%97%E4%B9%8B%E8%BD%BB.html"/>
+    <link href="http://bleedfly.com/blog/2011%E7%94%9F%E5%91%BD%E6%89%80%E4%B8%8D%E8%83%BD%E6%89%BF%E5%8F%97%E4%B9%8B%E8%BD%BB.html"/>
     <updated>2012-01-03T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/2011生命所不能承受之轻</id>
+    <id>http://bleedfly.com/blog/2011生命所不能承受之轻</id>
     <content type="html"><![CDATA[<p>转瞬2011已逝，迟到的总结和祝福。</p>
 
 <p>2011年发生了很多事情，基本上来说已经改变了我的人生，价值观和整体的方向。</p>
@@ -141,9 +141,9 @@ C）勾选：AutoProxy Compatible List<br />
   
   <entry>
     <title type="html"><![CDATA[2011年10月18号 晴]]></title>
-    <link href="http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%8818%E5%8F%B7-%E6%99%B4.html"/>
+    <link href="http://bleedfly.com/blog/2011%E5%B9%B410%E6%9C%8818%E5%8F%B7-%E6%99%B4.html"/>
     <updated>2011-10-18T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/2011年10月18号-晴</id>
+    <id>http://bleedfly.com/blog/2011年10月18号-晴</id>
     <content type="html"><![CDATA[<p>又却是一个晴朗的天气，杭州近日来的天气好的有点过分，秋已深确是有如此的时光。早上醒来看到满目的阳光，心情出奇的好。近日来早上醒的越来越晚，6点半起床的计划，从年初到现在却是一直都没有实现过的一次。规范自己的人生却要从规范自己的作息去做起。</p>
 
 <p>到了公司又开始了不停的项目啊项目，总是有做不完的项目在我看来。感觉现在淘宝的产品越来越是不专业了，不知道天天到底在干些什么，人也是找不到的。时时变动的需求和那永远切不准的点，不知道是不是我的要求太高了有的时候不免怀疑。和猫猫聊了下投资方面的事情，确实来说猫猫这面接触的比我要多一点，可是大家都是没有比较好的项目想去运作，否定了几个方案之后，看来有些东西还是要好好的用心去思考思考的。</p>
@@ -158,9 +158,9 @@ C）勾选：AutoProxy Compatible List<br />
   
   <entry>
     <title type="html"><![CDATA[2011年10月4号  晴]]></title>
-    <link href="http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%884%E5%8F%B7-%E6%99%B4.html"/>
+    <link href="http://bleedfly.com/blog/2011%E5%B9%B410%E6%9C%884%E5%8F%B7-%E6%99%B4.html"/>
     <updated>2011-10-04T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/2011年10月4号-晴</id>
+    <id>http://bleedfly.com/blog/2011年10月4号-晴</id>
     <content type="html"><![CDATA[<p>国庆的第四天，昨晚睡觉睡的比较晚，醒来时候已然是正午十分了。抬头望去漫天的白云，天气终于是晴朗起来了。突然想起小时候趴在桌子上面看着云彩慢慢变形的情景历历在目，不知觉的却是已经迈入的人生的第26个年头，时间总是在飞逝。以前的我肯定想不到自己现在的情形，是是非非，恩恩怨怨，一切都是命中的注定，也许在我们出生的那一刹那，人生就已经定格，我们只是在不停的重复又不停的忘却。</p>
 
 <p>如此好的阳光不是出去的话甚是浪费，随便的去逛了一下，却也是发现温度提升了，没有了前几日的冷涩。风儿拂过的脸庞，人生的一切却是一幕一幕。沏一杯茶，捧一本书，阳光下的中午，品味着别样的人生，这却是杭州没有的风景和氛围。</p>
@@ -175,9 +175,9 @@ C）勾选：AutoProxy Compatible List<br />
   
   <entry>
     <title type="html"><![CDATA[2011年10月3号  阴天]]></title>
-    <link href="http://bleedfly.github.com/blog/2011%E5%B9%B410%E6%9C%883%E5%8F%B7-%E9%98%B4%E5%A4%A9.html"/>
+    <link href="http://bleedfly.com/blog/2011%E5%B9%B410%E6%9C%883%E5%8F%B7-%E9%98%B4%E5%A4%A9.html"/>
     <updated>2011-10-04T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/2011年10月3号-阴天</id>
+    <id>http://bleedfly.com/blog/2011年10月3号-阴天</id>
     <content type="html"><![CDATA[<p>连日的阴雨却是将国庆的气氛扫的更加的清淡了。今日的天气也却是终于不见了雨滴，虽然是没有太阳在天上，却也是生的几分的淡雅。家里的空气一如既往的好，虽然没什么云彩却是看到透彻的天空。已经连续的在家休息了2天，第三天也就顺道而来了。一直想要在国庆期间好好的思考下人生却是没有实现，产品的想法倒是如潮水般的涌来，看来我又成了工作狂人，漫无边际的发散的思维不知道何时才是能够集中在一点。</p>
 
 <p>早上又是从睡梦中惊醒，总觉的自己要抓住一些什么，可是却也永远抓住的却是空气。又去翻起了酒徒的《家园》，架空的那段隋唐历史，无边的草原梦，以及梦想破灭后的淡淡的忧伤。可惜还是太长了，不知道又是何时我才能够完全的看完。最近已经是很少有去看书的冲动，纵然是一些小说也是没有看下去的欲望。难道那个破碎的梦已经再也不能企及。行万里路，读万卷书，谈何容易。</p>
@@ -188,9 +188,9 @@ C）勾选：AutoProxy Compatible List<br />
   
   <entry>
     <title type="html"><![CDATA[2011年9月26号 天气 小雨]]></title>
-    <link href="http://bleedfly.github.com/blog/%E9%9A%8F%E7%AC%94.html"/>
+    <link href="http://bleedfly.com/blog/%E9%9A%8F%E7%AC%94.html"/>
     <updated>2011-09-26T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/随笔</id>
+    <id>http://bleedfly.com/blog/随笔</id>
     <content type="html"><![CDATA[<p>发现最近已经是越睡越晚，早上已经是不知道几点才是睡着，一大早醒来迷迷糊糊的听到外面的躁动。看样子大家也都已经是去上班了，今天蛋蛋居然在9点整去上班了，实属意外。隐隐约约中听到东东的蛋疼的声音叫了我几下，然后就没有然后了。</p>
 
 <p>翻了下闹钟发现已经是9点多了，依旧是翻身了几次，恋恋不舍的爬动了起来。又是迟到的一天啊。慢悠悠的刷牙洗脸，感觉着一阵阵的惬意迎面而来，凉水却是总能清醒你自己的心绪。看着窗外淡淡的天空，慢慢的发现秋意是真的渐浓了，如同这萧索的天空。换上昨天刚买的袜子，便是踏上了上班的征途。路上的这20分钟是发现唯一的和大自然接触的机会，杭州是个绿化做的还是不错的城市，到处的公园和绿化的植被，城市环绕着山岭。很久之前一直想着每天早上去山上走上那么的一圈，一直以来却只是没有实现的想法而已。发现最近思绪飘忽的厉害，慢慢的健忘了起来，不知道是否真的是睡的太晚的缘故。</p>
@@ -211,9 +211,9 @@ C）勾选：AutoProxy Compatible List<br />
   
   <entry>
     <title type="html"><![CDATA[wordpress折腾小记]]></title>
-    <link href="http://bleedfly.github.com/blog/wordpress%E6%8A%98%E8%85%BE%E5%B0%8F%E8%AE%B0.html"/>
+    <link href="http://bleedfly.com/blog/wordpress%E6%8A%98%E8%85%BE%E5%B0%8F%E8%AE%B0.html"/>
     <updated>2011-09-07T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/wordpress折腾小记</id>
+    <id>http://bleedfly.com/blog/wordpress折腾小记</id>
     <content type="html"><![CDATA[<p>其实整体来说上次已经折腾过一次的wordpress，这次又死灰复燃的把。</p>
 
 <p>基于archlinux，可以节省很多不必要的编译，pacman是我用过的最好的包管理安装工具没有之一。相对于apt-get的瞎装文件，yum的不知所措，pacman算是比较轻量级别的。</p>
@@ -271,9 +271,9 @@ sudo rc.d start php-fpm</pre> <br />
   
   <entry>
     <title type="html"><![CDATA[2003年 1月7号 星期二 晴]]></title>
-    <link href="http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%887%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%BA%8C-%E6%99%B4.html"/>
+    <link href="http://bleedfly.com/blog/2003%E5%B9%B4-1%E6%9C%887%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%BA%8C-%E6%99%B4.html"/>
     <updated>2003-01-07T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/2003年-1月7号-星期二-晴</id>
+    <id>http://bleedfly.com/blog/2003年-1月7号-星期二-晴</id>
     <content type="html"><![CDATA[<p>冷风呼啸着而过，带给我刺骨的寒冷，吹尽我无限的悲哀。早上醒来，天已经很是亮了，太阳没有露出脸来，空中有一些灰蒙蒙的云在飘着，混浊的空气中有着一种说不出的滋味，上早班的时间已经过去了，街显得有一些安静，偶尔飞过一辆汽车，依然消不了这满街灰沉沉的气息。远处传来几声车铃声，如同鸟儿在清晨的鸣叫，清新，悦耳，给人一种心旷神恰的感觉，这种感觉贯穿你的全身，像是微醉后那种飘飘然的意念，又像是倾听情人的声音那样的美妙。平静的心中有了一丝的涟漪，大海中的一卷波浪，草原上的一次微风。太阳出来了，以普照全世界的名义，射向大地，房子也都亮了起来，一切都宛如从地狱中一下子来到了天堂，满脸满身的喜悦，偶尔也传来几声卖东西的吆喝声，勾起了我肚子的不满，早饭没吃。</p>
 
 <p>继续闲逛，继续想象，放飞想象的翅膀，在军宇宙中遨游，然而现实的景象总有一些让我失望，不过仅此而已。</p>
@@ -284,9 +284,9 @@ sudo rc.d start php-fpm</pre> <br />
   
   <entry>
     <title type="html"><![CDATA[2003年 1月6号 星期一 晴]]></title>
-    <link href="http://bleedfly.github.com/blog/2003%E5%B9%B4-1%E6%9C%886%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%B8%80-%E6%99%B4.html"/>
+    <link href="http://bleedfly.com/blog/2003%E5%B9%B4-1%E6%9C%886%E5%8F%B7-%E6%98%9F%E6%9C%9F%E4%B8%80-%E6%99%B4.html"/>
     <updated>2003-01-06T00:00:00+08:00</updated>
-    <id>http://bleedfly.github.com/blog/2003年-1月6号-星期一-晴</id>
+    <id>http://bleedfly.com/blog/2003年-1月6号-星期一-晴</id>
     <content type="html"><![CDATA[<p>新年来的第一篇日记，有些无从下笔的感觉，好多天都没有写日记了，可能最近比较忙。</p>
 
 <p>冷风吹打着早已没有知觉的脸庞，呼出一些带着水珠的气体，走在大街，路灯早已亮了起来，汽车的喇叭声在耳边回荡,犹如是来自地狱的音乐，冷酷，刺耳。在一片朦胧的意境中，对面马驶来一辆轿车，飞驰而过，像黑夜中的一流星划过长空留下美丽的弧一样的给我以无限的遐想。空中弥漫着一种夜的滋味，给人一种摸不透的感觉，宛如那种初尝鲜果的意境，回味无穷。两排的房屋乱七八糟的树在街旁，在灯光的交映下，像是魔鬼的脸蛋，可怕，无情。总觉得夜是无尽的，身旁有着无数的目光注视看我的行动一般，心中总是有一些不安。风很冷，但是它让我更清醒，它让我摆脱了一种飘飘然的态度，冷月，冷风，冷街，心更冷。</p>
