@@ -14,6 +14,45 @@
 
   
   <entry>
+    <title type="html"><![CDATA[emacs-for-mac-fullscreen]]></title>
+    <link href="http://bleedfly.com/blog/emacs-for-mac-fullscreen.html"/>
+    <updated>2012-07-11T16:03:00+08:00</updated>
+    <id>http://bleedfly.com/blog/emacs-for-mac-fullscreen</id>
+    <content type="html"><![CDATA[<p>最近以来一直在折腾emacs,徘徊在编辑器之神和神的编辑器之争一直在进行着</p>
+
+<p>emacs是个开源的好东西，适用在各个的平台之上，目前稳定的版本是24.1。去官网下载稳定版本的源码，用的国内的北京交通大学的mirror地址<a href="http://mirror.bjtu.edu.cn/gnu/emacs/emacs-24.1.tar.gz">http://mirror.bjtu.edu.cn/gnu/emacs/emacs-24.1.tar.gz</a></p>
+
+<p>mac下有个全屏的patch需要打上，地址在<a href="https://gist.github.com/2862477">https://gist.github.com/2862477</a></p>
+
+<p>下面开始进行patch</p>
+
+<p>进入到刚刚下载的emacs-24.1的目录中</p>
+
+<p><code>patch -b -p0 &lt; emacs-24.1-lion-fullscreen.patch</code></p>
+
+<p>总共需要修改 <code>lisp/term/ns-win.el</code></p>
+
+<p><code>src/nsfns.m</code></p>
+
+<p><code>src/neterm.m</code></p>
+
+<p>然后<code>./configure --with-ns</code></p>
+
+<p>会报找不到几个包</p>
+
+<p><code>brew install libjepg</code></p>
+
+<p><code>berw install libtiff</code></p>
+
+<p>直接 <code>./configure --with-ns</code></p>
+
+<p><code>make &amp;&amp; make install</code></p>
+
+<p><code>mv nextstep/Emacs.app /Application/</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[关于翻墙之windows之ssh篇]]></title>
     <link href="http://bleedfly.com/blog/%E5%85%B3%E4%BA%8E%E7%BF%BB%E5%A2%99.html"/>
     <updated>2012-02-02T00:00:00+08:00</updated>
