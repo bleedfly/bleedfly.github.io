@@ -14,6 +14,268 @@
 
   
   <entry>
+    <title type="html"><![CDATA[ec2下openvpn建设]]></title>
+    <link href="http://bleedfly.com/blog/ec2-openvpn.html"/>
+    <updated>2012-08-01T15:29:00+08:00</updated>
+    <id>http://bleedfly.com/blog/ec2-openvpn</id>
+    <content type="html"><![CDATA[<p>一直以来都是用着linode的vps服务，稳定，尊贵，还具有一个最最重要的特点，那就是贵，最低的配置一个月19.95刀。经历了最近的一段穷人时期，我给自己找了各种的免费的替代方案。将博客迁移到sae，由于国内域名的备份问题，最终放弃了，博客最终是迁移到的octopress上，github的免费主页，很是geek的发送博文的方式，下次可以写个教程。</p>
+
+<p>言归正传，注册ec2需要一个大的前提，你必须得有张双币信用卡。注册教程网上很多，我也稍微提下。</p>
+
+<p>一.新用户的注册</p>
+
+<p>1.首先登陆aws的网站<a href="http://aws.amazon.com/ec2/">http://aws.amazon.com/ec2/</a></p>
+
+<p>  <img src="http://pic.yupoo.com/tbwentuo_v/C9QD7LYx/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9QD7LYx/custom.jpg" /></p>
+
+<p>2.选择I&#8217;m a new user.
+<img src="http://pic.yupoo.com/tbwentuo_v/C9QNoGRS/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9QNoGRS/custom.jpg" /></p>
+
+<p>3.点击Sign in using our secure server</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9QToG1C/TQHA4.png" alt="http://pic.yupoo.com/tbwentuo_v/C9QToG1C/TQHA4.png" /></p>
+
+<p>4.填写你自己的name,email,password,点击Continue</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9QVFzRS/ygjlj.png" alt="http://pic.yupoo.com/tbwentuo_v/C9QVFzRS/ygjlj.png" /></p>
+
+<p>5.填写自己详细的信息，然后Create Account and Continue，直接到一个你需要填写信用卡信息的页面</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R43sWw/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R43sWw/custom.jpg" /></p>
+
+<p>6.填写完后进入一个验证页面</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R3T3ko/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R3T3ko/custom.jpg" /></p>
+
+<p>填写完自己的手机号后，亚马逊会打表电话给你让你把页面上的数字输入到手机上，用来确认是人工在操作，验证通过后进入下面页面</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R3D3Qs/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R3D3Qs/custom.jpg" /></p>
+
+<p>点击Continue进入下一步</p>
+
+<p>7.最后会告诉你，进入审核，然后就等着收邮件吧。</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R7xZ0I/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R7xZ0I/custom.jpg" /></p>
+
+<p>可能会扣掉你信用卡里面1美元做验证，然后会打回去的，请放心，依旧是免费的。</p>
+
+<p>到这整个注册流程就结束了，等待验证邮件发送之后，就能进入自己的ec2了。</p>
+
+<p>二.instance的建立</p>
+
+<p>AWS激活之后进入console页面
+<a href="https://console.aws.amazon.com/console/home">https://console.aws.amazon.com/console/home</a></p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9Rbxce2/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rbxce2/custom.jpg" /></p>
+
+<p>1.选择EC2服务，左边这个可以选择机房所在地，有小日本的机房可选。点击Launch Instance</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9RcMTrQ/TQed8.png" alt="http://pic.yupoo.com/tbwentuo_v/C9RcMTrQ/TQed8.png" /></p>
+
+<p>2.选择 Classic Wizard 点击 Continue
+<img src="http://pic.yupoo.com/tbwentuo_v/C9Rdxp1g/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rdxp1g/custom.jpg" /></p>
+
+<p>3.在aim里面记得一定带星号的，是免费政策支持的，这里我选择的是Amazon自己的linux，习惯Ubuntu的可以选择Ubuntu的那个版本</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9Rf8eEx/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rf8eEx/custom.jpg" /></p>
+
+<p>4.记得一定要选择Micro这个不然小心被扣费
+<img src="http://pic.yupoo.com/tbwentuo_v/C9Rh24dc/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rh24dc/custom.jpg" /></p>
+
+<p>5.一路next下去，下载好生成的bleedfly.pem这个密钥
+<img src="http://pic.yupoo.com/tbwentuo_v/C9Riw4fT/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Riw4fT/custom.jpg" /></p>
+
+<p>6.Launch之后等待instance初始化完成。找到public DNS</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9RjqW9V/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9RjqW9V/custom.jpg" /></p>
+
+<p>7.linux或者mac系统的话先
+<code>chmod 400 bleedfly.pem</code>
+直接
+<code>ssh -i bleedfly.pem ec2-user@ec2-174-129-102-246.compute-1.amazonaws.com</code>
+就能连接上</p>
+
+<p>由于secureCRT不能直接连接pem，需要做如下转换才能用secureCRT连接上
+<code>chmod 600 bleedfly.pem</code></p>
+
+<p><code>ssh-keygen -p -f bleedfly.pem</code></p>
+
+<p><code>ssh-keygen -e -f bleedfly.pem &gt; bleedfly.pem.pub</code></p>
+
+<p>就创建了在SecureCRT中所使用的验证文件</p>
+
+<p>在SecureCRT选连接->新建会话->协议选择ssh2 下一步 -> 主机名填写public dns 下一步,用户名填写ec2-user 下一步 -> 完成.</p>
+
+<p>在连接的列表中找到刚创建的连接,右键属性,左边树中选择SSH2,然后选择右边鉴权中公钥,点属性,在出来的对话框中选择刚才生成的文件，这样就可以用SecureCRT登陆了</p>
+
+<p>三.openvpn配置</p>
+
+<p>1.安装</p>
+
+<p><code>sudo yum -y install openvpn</code></p>
+
+<p>2.移动easy-rsa到一个方便操作的位置</p>
+
+<p><code>sudo cp -R /usr/share/openvpn/easy-rsa /etc/openvpn/</code></p>
+
+<p>3.进入目录</p>
+
+<p><code>cd /etc/openvpn/easy-rsa/2.0</code></p>
+
+<p>4.运行以下命令</p>
+
+<p><code>./clean-all</code></p>
+
+<p><code>source ./vars #使设置生效</code></p>
+
+<p><code>./build-ca server #创建证书颁发机构CA，一路回车</code></p>
+
+<p><code>./build-key-server server #生成服务器证书，一路回车，最后两个y</code></p>
+
+<p><code>./build-key bleedfly #生成名为bsk的客户证书，一路回车，最后两个y</code></p>
+
+<p><code>./build-dh #生成Diffie Hellman参数</code></p>
+
+<p>5.编辑openvpn配置文件</p>
+
+<p><code>cd /etc/openvpn/</code></p>
+
+<p><code>vim server.conf</code></p>
+
+<p>写入</p>
+
+<p><code>port 443</code></p>
+
+<p><code>proto tcp</code></p>
+
+<p><code>dev tun</code></p>
+
+<p><code>ca /etc/openvpn/easy-rsa/2.0/keys/ca.crt</code></p>
+
+<p><code>cert /etc/openvpn/easy-rsa/2.0/keys/server.crt</code></p>
+
+<p><code>key /etc/openvpn/easy-rsa/2.0/keys/server.key</code></p>
+
+<p><code>dh /etc/openvpn/easy-rsa/2.0/keys/dh1024.pem</code></p>
+
+<p><code>server 192.168.0.0 255.255.255.0</code></p>
+
+<p><code>push  "redirect-gateway def1"</code></p>
+
+<p><code>push  "dhcp-option DNS 8.8.8.8"</code></p>
+
+<p><code>push  "dhcp-option DNS 8.8.4.4"</code></p>
+
+<p><code>client-to-client</code></p>
+
+<p><code>keepalive 10 120</code></p>
+
+<p><code>comp-lzo</code></p>
+
+<p><code>persist-key</code></p>
+
+<p><code>persist-tun</code></p>
+
+<p><code>verb 3</code></p>
+
+<p>配置端口转发</p>
+
+<p><code>vi /etc/sysctl.conf</code></p>
+
+<p>将net.ipv4.ip_forward = 0改成net.ipv4.ip_forward = 1，将net.ipv4.tcp_syncookies = 1改为#net.ipv4.tcp_syncookies = 1保存，执行sysctl -p使之生效。
+输入</p>
+
+<p><code>iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -j SNAT --to-source 1.2.3.4      #1.2.3.4为你的vps IP</code></p>
+
+<p><code>/etc/init.d/iptables save              #保存iptables设置</code></p>
+
+<p><code>/etc/init.d/iptables restart            #重启iptables</code></p>
+
+<p>添加开机启动</p>
+
+<p><code>sudo vim /etc/rc.local</code></p>
+
+<p>添加一行</p>
+
+<p><code>/usr/sbin/openvpn --config /etc/openvpn/server.conf</code></p>
+
+<p>最后启动openvpn</p>
+
+<p><code>sudo openvpn --config /etc/openvpn/server.conf</code></p>
+
+<p>到此服务器端配置完毕</p>
+
+<p>四.windows客户端配置</p>
+
+<p>1.下载安装openvpn</p>
+
+<p>2.在服务器端安装lrzsz</p>
+
+<p>先安装gcc <code>sudo yum install gcc</code></p>
+
+<p><code>wget http://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz</code></p>
+
+<p><code>tar zxvf lrzsz-0.12.20.tar.gz</code></p>
+
+<p><code>cd lrzsz-0.12.20</code></p>
+
+<p><code>./configure --prefix=/usr/local/lrzsz</code></p>
+
+<p><code>make</code></p>
+
+<p><code>make install</code></p>
+
+<p><code>cd /usr/bin</code></p>
+
+<p><code>ln -s /usr/local/lrzsz/bin/lrz rz</code></p>
+
+<p><code>ln -s /usr/local/lrzsz/bin/lsz sz</code></p>
+
+<p>这样就能在SecureCRT里面rz,sz</p>
+
+<p>3.下载ca.crt bleedfly.key bleedfly.crt</p>
+
+<p>这三个文件放在openvpn客户端安装路径下得config文件夹中</p>
+
+<p>4.在config下新建一个名字为“bleedfly.ovpn”的文本文件</p>
+
+<p><code>client</code></p>
+
+<p><code>dev tun</code></p>
+
+<p><code>proto tcp</code></p>
+
+<p><code>remote 1.2.3.4 443   # 1.2.3.4 为EC2 的Public DNS， 不能用内部IP。</code></p>
+
+<p><code>resolv-retry infinite</code></p>
+
+<p><code>nobind</code></p>
+
+<p><code>persist-key</code></p>
+
+<p><code>persist-tun</code></p>
+
+<p><code>ca ca.crt</code></p>
+
+<p><code>cert bsk.crt</code></p>
+
+<p><code>key bsk.key</code></p>
+
+<p><code>ns-cert-type server</code></p>
+
+<p><code>comp-lzo</code></p>
+
+<p><code>verb 3</code></p>
+
+<p>5.运行 OpenVPN GUI，然后connect。</p>
+
+<p>五.mac下客户端配置</p>
+
+<p>下载tunnelblick这个软件，同windwos一样将3个文件放到配置下，新增bleedfly.ovpn 文件，代码同windows</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[北京印象]]></title>
     <link href="http://bleedfly.com/blog/beijing-impression.html"/>
     <updated>2012-07-12T14:30:00+08:00</updated>

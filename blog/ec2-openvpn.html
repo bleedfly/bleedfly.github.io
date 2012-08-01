@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ec2下openvpn建设 - on the way</title>
+  
+  <meta name="description" content="Ec2下openvpn建设 2012-08-01 Wed 一直以来都是用着linode的vps服务，稳定，尊贵，还具有一个最最重要的特点，那就是贵，最低的配置一个月19.95刀。经历了最近的一段穷人时期，我给自己找了各种的免费的替代方案。将博客迁移到sae，由于国内域名的备份问题，最终放弃了， &hellip;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/stylesheets/screen.css" />
+  
+  <link rel="alternate" href="/atom.xml" type="application/atom+xml" />
+  
+</head>
+
+<body>
+<!--[if IE]>
+html,body{height:100%;overflow:hidden}
+<div class="ie-go-away">My blog does not support the IE!</div>
+<![endif]-->
+
+<!-- 黑长直 -->
+<nav class="black-long-straight">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/atom.xml">RSS</a></li>
+    
+    <li>
+      <form action="http://google.com/search" method="get" target="_blank">
+        <input type="hidden" name="q" value="site:bleedfly.com" />
+        <input type="text" name="q" class="search" placeholder="Search" x-webkit-speech />
+      </form>
+    </li>
+    
+  </ul>
+</nav>
+
+
+<header class="my-nickname"><em title="">一路向前</em></header>
+
+<section class="main-wrap clearfix">
+  <article role="article">
+    
+
+<header>
+  
+    <h1 class="entry-title">Ec2下openvpn建设</h1>
+  
+  
+    <p class="meta">
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-01T15:29:00+08:00" pubdate="pubdate" data-updated="true">2012-08-01 Wed</time>
+      
+
+      <span class="share-to-weibo">
+        <a href="javascript:void(0)" onclick="window.open('http://service.weibo.com/share/share.php?appkey=&amp;ralateUid=&amp;title=Ec2下openvpn建设 - &amp;url=http://bleedfly.com/blog/ec2-openvpn.html', null, 'width=615,height=505,toolbar=0,status=0')" class="sina-weibo" title="分享到新浪微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;appkey=&amp;title=Ec2下openvpn建设 - &amp;url=http://bleedfly.com/blog/ec2-openvpn.html', null, 'width=700,height=680,toolbar=0,status=0')" class="tencent-weibo" title="分享到腾讯微博"></a>
+
+        <a href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?text=Ec2下openvpn建设 - http://bleedfly.com/blog/ec2-openvpn.html', null, 'width=600,height=300,toolbar=0,status=0')" class="twitter" title="分享到Twitter"></a>
+      </span>
+    </p>
+  
+</header>
+
+
+  <div class="entry-content typo"><p>一直以来都是用着linode的vps服务，稳定，尊贵，还具有一个最最重要的特点，那就是贵，最低的配置一个月19.95刀。经历了最近的一段穷人时期，我给自己找了各种的免费的替代方案。将博客迁移到sae，由于国内域名的备份问题，最终放弃了，博客最终是迁移到的octopress上，github的免费主页，很是geek的发送博文的方式，下次可以写个教程。</p>
+
+<p>言归正传，注册ec2需要一个大的前提，你必须得有张双币信用卡。注册教程网上很多，我也稍微提下。</p>
+
+<p>一.新用户的注册</p>
+
+<p>1.首先登陆aws的网站<a href="http://aws.amazon.com/ec2/">http://aws.amazon.com/ec2/</a></p>
+
+<p>  <img src="http://pic.yupoo.com/tbwentuo_v/C9QD7LYx/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9QD7LYx/custom.jpg" /></p>
+
+<p>2.选择I&#8217;m a new user.
+<img src="http://pic.yupoo.com/tbwentuo_v/C9QNoGRS/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9QNoGRS/custom.jpg" /></p>
+
+<p>3.点击Sign in using our secure server</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9QToG1C/TQHA4.png" alt="http://pic.yupoo.com/tbwentuo_v/C9QToG1C/TQHA4.png" /></p>
+
+<p>4.填写你自己的name,email,password,点击Continue</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9QVFzRS/ygjlj.png" alt="http://pic.yupoo.com/tbwentuo_v/C9QVFzRS/ygjlj.png" /></p>
+
+<p>5.填写自己详细的信息，然后Create Account and Continue，直接到一个你需要填写信用卡信息的页面</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R43sWw/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R43sWw/custom.jpg" /></p>
+
+<p>6.填写完后进入一个验证页面</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R3T3ko/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R3T3ko/custom.jpg" /></p>
+
+<p>填写完自己的手机号后，亚马逊会打表电话给你让你把页面上的数字输入到手机上，用来确认是人工在操作，验证通过后进入下面页面</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R3D3Qs/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R3D3Qs/custom.jpg" /></p>
+
+<p>点击Continue进入下一步</p>
+
+<p>7.最后会告诉你，进入审核，然后就等着收邮件吧。</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9R7xZ0I/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9R7xZ0I/custom.jpg" /></p>
+
+<p>可能会扣掉你信用卡里面1美元做验证，然后会打回去的，请放心，依旧是免费的。</p>
+
+<p>到这整个注册流程就结束了，等待验证邮件发送之后，就能进入自己的ec2了。</p>
+
+<p>二.instance的建立</p>
+
+<p>AWS激活之后进入console页面
+<a href="https://console.aws.amazon.com/console/home">https://console.aws.amazon.com/console/home</a></p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9Rbxce2/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rbxce2/custom.jpg" /></p>
+
+<p>1.选择EC2服务，左边这个可以选择机房所在地，有小日本的机房可选。点击Launch Instance</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9RcMTrQ/TQed8.png" alt="http://pic.yupoo.com/tbwentuo_v/C9RcMTrQ/TQed8.png" /></p>
+
+<p>2.选择 Classic Wizard 点击 Continue
+<img src="http://pic.yupoo.com/tbwentuo_v/C9Rdxp1g/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rdxp1g/custom.jpg" /></p>
+
+<p>3.在aim里面记得一定带星号的，是免费政策支持的，这里我选择的是Amazon自己的linux，习惯Ubuntu的可以选择Ubuntu的那个版本</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9Rf8eEx/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rf8eEx/custom.jpg" /></p>
+
+<p>4.记得一定要选择Micro这个不然小心被扣费
+<img src="http://pic.yupoo.com/tbwentuo_v/C9Rh24dc/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Rh24dc/custom.jpg" /></p>
+
+<p>5.一路next下去，下载好生成的bleedfly.pem这个密钥
+<img src="http://pic.yupoo.com/tbwentuo_v/C9Riw4fT/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9Riw4fT/custom.jpg" /></p>
+
+<p>6.Launch之后等待instance初始化完成。找到public DNS</p>
+
+<p><img src="http://pic.yupoo.com/tbwentuo_v/C9RjqW9V/custom.jpg" alt="http://pic.yupoo.com/tbwentuo_v/C9RjqW9V/custom.jpg" /></p>
+
+<p>7.linux或者mac系统的话先
+<code>chmod 400 bleedfly.pem</code>
+直接
+<code>ssh -i bleedfly.pem ec2-user@ec2-174-129-102-246.compute-1.amazonaws.com</code>
+就能连接上</p>
+
+<p>由于secureCRT不能直接连接pem，需要做如下转换才能用secureCRT连接上
+<code>chmod 600 bleedfly.pem</code></p>
+
+<p><code>ssh-keygen -p -f bleedfly.pem</code></p>
+
+<p><code>ssh-keygen -e -f bleedfly.pem &gt; bleedfly.pem.pub</code></p>
+
+<p>就创建了在SecureCRT中所使用的验证文件</p>
+
+<p>在SecureCRT选连接->新建会话->协议选择ssh2 下一步 -> 主机名填写public dns 下一步,用户名填写ec2-user 下一步 -> 完成.</p>
+
+<p>在连接的列表中找到刚创建的连接,右键属性,左边树中选择SSH2,然后选择右边鉴权中公钥,点属性,在出来的对话框中选择刚才生成的文件，这样就可以用SecureCRT登陆了</p>
+
+<p>三.openvpn配置</p>
+
+<p>1.安装</p>
+
+<p><code>sudo yum -y install openvpn</code></p>
+
+<p>2.移动easy-rsa到一个方便操作的位置</p>
+
+<p><code>sudo cp -R /usr/share/openvpn/easy-rsa /etc/openvpn/</code></p>
+
+<p>3.进入目录</p>
+
+<p><code>cd /etc/openvpn/easy-rsa/2.0</code></p>
+
+<p>4.运行以下命令</p>
+
+<p><code>./clean-all</code></p>
+
+<p><code>source ./vars #使设置生效</code></p>
+
+<p><code>./build-ca server #创建证书颁发机构CA，一路回车</code></p>
+
+<p><code>./build-key-server server #生成服务器证书，一路回车，最后两个y</code></p>
+
+<p><code>./build-key bleedfly #生成名为bsk的客户证书，一路回车，最后两个y</code></p>
+
+<p><code>./build-dh #生成Diffie Hellman参数</code></p>
+
+<p>5.编辑openvpn配置文件</p>
+
+<p><code>cd /etc/openvpn/</code></p>
+
+<p><code>vim server.conf</code></p>
+
+<p>写入</p>
+
+<p><code>port 443</code></p>
+
+<p><code>proto tcp</code></p>
+
+<p><code>dev tun</code></p>
+
+<p><code>ca /etc/openvpn/easy-rsa/2.0/keys/ca.crt</code></p>
+
+<p><code>cert /etc/openvpn/easy-rsa/2.0/keys/server.crt</code></p>
+
+<p><code>key /etc/openvpn/easy-rsa/2.0/keys/server.key</code></p>
+
+<p><code>dh /etc/openvpn/easy-rsa/2.0/keys/dh1024.pem</code></p>
+
+<p><code>server 192.168.0.0 255.255.255.0</code></p>
+
+<p><code>push  "redirect-gateway def1"</code></p>
+
+<p><code>push  "dhcp-option DNS 8.8.8.8"</code></p>
+
+<p><code>push  "dhcp-option DNS 8.8.4.4"</code></p>
+
+<p><code>client-to-client</code></p>
+
+<p><code>keepalive 10 120</code></p>
+
+<p><code>comp-lzo</code></p>
+
+<p><code>persist-key</code></p>
+
+<p><code>persist-tun</code></p>
+
+<p><code>verb 3</code></p>
+
+<p>配置端口转发</p>
+
+<p><code>vi /etc/sysctl.conf</code></p>
+
+<p>将net.ipv4.ip_forward = 0改成net.ipv4.ip_forward = 1，将net.ipv4.tcp_syncookies = 1改为#net.ipv4.tcp_syncookies = 1保存，执行sysctl -p使之生效。
+输入</p>
+
+<p><code>iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -j SNAT --to-source 1.2.3.4      #1.2.3.4为你的vps IP</code></p>
+
+<p><code>/etc/init.d/iptables save              #保存iptables设置</code></p>
+
+<p><code>/etc/init.d/iptables restart            #重启iptables</code></p>
+
+<p>添加开机启动</p>
+
+<p><code>sudo vim /etc/rc.local</code></p>
+
+<p>添加一行</p>
+
+<p><code>/usr/sbin/openvpn --config /etc/openvpn/server.conf</code></p>
+
+<p>最后启动openvpn</p>
+
+<p><code>sudo openvpn --config /etc/openvpn/server.conf</code></p>
+
+<p>到此服务器端配置完毕</p>
+
+<p>四.windows客户端配置</p>
+
+<p>1.下载安装openvpn</p>
+
+<p>2.在服务器端安装lrzsz</p>
+
+<p>先安装gcc <code>sudo yum install gcc</code></p>
+
+<p><code>wget http://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz</code></p>
+
+<p><code>tar zxvf lrzsz-0.12.20.tar.gz</code></p>
+
+<p><code>cd lrzsz-0.12.20</code></p>
+
+<p><code>./configure --prefix=/usr/local/lrzsz</code></p>
+
+<p><code>make</code></p>
+
+<p><code>make install</code></p>
+
+<p><code>cd /usr/bin</code></p>
+
+<p><code>ln -s /usr/local/lrzsz/bin/lrz rz</code></p>
+
+<p><code>ln -s /usr/local/lrzsz/bin/lsz sz</code></p>
+
+<p>这样就能在SecureCRT里面rz,sz</p>
+
+<p>3.下载ca.crt bleedfly.key bleedfly.crt</p>
+
+<p>这三个文件放在openvpn客户端安装路径下得config文件夹中</p>
+
+<p>4.在config下新建一个名字为“bleedfly.ovpn”的文本文件</p>
+
+<p><code>client</code></p>
+
+<p><code>dev tun</code></p>
+
+<p><code>proto tcp</code></p>
+
+<p><code>remote 1.2.3.4 443   # 1.2.3.4 为EC2 的Public DNS， 不能用内部IP。</code></p>
+
+<p><code>resolv-retry infinite</code></p>
+
+<p><code>nobind</code></p>
+
+<p><code>persist-key</code></p>
+
+<p><code>persist-tun</code></p>
+
+<p><code>ca ca.crt</code></p>
+
+<p><code>cert bsk.crt</code></p>
+
+<p><code>key bsk.key</code></p>
+
+<p><code>ns-cert-type server</code></p>
+
+<p><code>comp-lzo</code></p>
+
+<p><code>verb 3</code></p>
+
+<p>5.运行 OpenVPN GUI，然后connect。</p>
+
+<p>五.mac下客户端配置</p>
+
+<p>下载tunnelblick这个软件，同windwos一样将3个文件放到配置下，新增bleedfly.ovpn 文件，代码同windows</p>
+</div>
+
+
+    <footer>
+      <p class="meta neighbor clearfix">
+        
+          <a href="/blog/beijing-impression.html" class="float-l" title="Previous Post: 北京印象">&laquo; 北京印象</a>
+        
+        
+      </p>
+    </footer>
+  </article>
+
+  <section id="disqus_thread"></section>
+</section>
+
+<footer class="footer">
+  &copy;2012 一路向前
+  &nbsp;-&nbsp;
+  Powered by <a href="http://octopress.org" target="_blank">Octopress</a>
+</footer>
+
+
+<ul id="social-links">
+  
+  
+  <!-- Sina Weibo -->
+  <li>
+    <a href="http://weibo.com/bleedfly" target="_blank">
+      <svg width="40" height="40" class="sina-weibo" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#f9f9f9" d="M9.641,17.231c-3.799,0.374-7.079-1.343-7.326-3.838c-0.246-2.494,2.634-4.82,6.434-5.196  c3.798-0.377,7.079,1.34,7.326,3.835C16.32,14.529,13.44,16.855,9.641,17.231 M17.24,8.952c-0.322-0.098-0.544-0.163-0.375-0.587  c0.365-0.921,0.403-1.718,0.007-2.286c-0.745-1.063-2.783-1.005-5.12-0.027c0-0.002-0.734,0.321-0.546-0.261  c0.359-1.156,0.305-2.123-0.254-2.682c-1.267-1.271-4.639,0.047-7.53,2.936C1.257,8.209,0,10.504,0,12.488  c0,3.796,4.866,6.104,9.628,6.104c6.241,0,10.393-3.627,10.393-6.506C20.021,10.347,18.557,9.358,17.24,8.952" />
+        <path fill="#f9f9f9" d="M21.384,2.005c-1.507-1.671-3.73-2.308-5.782-1.872l0,0c-0.475,0.102-0.778,0.569-0.676,1.043  c0.101,0.473,0.567,0.777,1.043,0.674c1.459-0.31,3.039,0.145,4.111,1.332c1.069,1.188,1.362,2.806,0.902,4.225v0.001  c-0.149,0.462,0.104,0.957,0.566,1.106c0.461,0.149,0.956-0.104,1.105-0.565c0,0,0-0.002,0-0.004  C23.299,5.95,22.894,3.674,21.384,2.005" />
+        <path fill="#f9f9f9" d="M19.07,4.094c-0.734-0.814-1.817-1.123-2.817-0.912c-0.409,0.088-0.671,0.49-0.581,0.899  c0.088,0.407,0.489,0.67,0.896,0.58v0.001c0.488-0.104,1.019,0.047,1.379,0.445c0.359,0.398,0.455,0.941,0.301,1.416l0,0  c-0.127,0.398,0.09,0.825,0.488,0.954c0.396,0.127,0.824-0.091,0.952-0.488C20,6.017,19.805,4.908,19.07,4.094" />
+        <path fill="#f9f9f9" d="M9.85,12.713c-0.132,0.229-0.426,0.338-0.656,0.242c-0.227-0.094-0.297-0.348-0.169-0.572  c0.132-0.221,0.416-0.328,0.64-0.239C9.895,12.227,9.978,12.483,9.85,12.713 M8.64,14.268c-0.367,0.586-1.154,0.843-1.747,0.57  c-0.584-0.265-0.756-0.945-0.389-1.518c0.362-0.568,1.124-0.824,1.712-0.574C8.811,12.998,9.001,13.675,8.64,14.268 M10.021,10.118  c-1.808-0.47-3.852,0.431-4.637,2.023c-0.8,1.624-0.026,3.428,1.801,4.017c1.892,0.612,4.122-0.324,4.898-2.078  C12.848,12.367,11.891,10.602,10.021,10.118" />
+      </svg>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li>
+    <a href="https://twitter.com/#!/bleedfly" target="_blank">
+      <svg width="40" height="40" class="twitter" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#f9f9f9" d="M14.605,13.11C15.518,10.259,16.634,8.411999999999999,17.918,7.071999999999999C18.877,6.071999999999999,19.371,5.755999999999999,18.808999999999997,6.855999999999999C19.058999999999997,6.656999999999999,19.415,6.391999999999999,19.694,6.2509999999999994C21.249,5.518,21.136,6.132,20.067,6.7909999999999995C22.990000000000002,5.7459999999999996,22.887,7.076999999999999,19.796,7.739999999999999C22.323,7.786999999999999,25.009999999999998,9.395999999999999,25.783,12.817C25.888,13.291,25.762,13.245000000000001,26.247,13.331C27.294,13.517,28.277,13.504999999999999,29.238,13.200999999999999C29.134,13.908999999999999,28.198999999999998,14.367999999999999,26.741,14.671999999999999C26.2,14.783999999999999,26.09,14.754999999999999,26.736,14.900999999999998C27.535,15.079999999999998,28.426000000000002,15.126999999999999,29.37,15.082999999999998C28.636000000000003,15.928999999999998,27.465,16.360999999999997,26.016000000000002,16.378999999999998C25.112000000000002,19.688,23.040000000000003,22.057,20.42,23.543C14.268,27.035,5.312000000000001,26.527,0.8210000000000015,20.183999999999997C3.7680000000000016,22.496,8.133000000000003,23.005,11.376000000000001,19.782999999999998C9.251000000000001,19.782999999999998,8.702000000000002,18.191999999999997,10.386000000000001,17.333999999999996C8.791,17.316999999999997,7.7780000000000005,16.812999999999995,7.183000000000002,15.899999999999997C6.957000000000002,15.552999999999997,6.9540000000000015,15.525999999999996,7.323000000000001,15.259999999999996C7.7280000000000015,14.966999999999997,8.281,14.836999999999996,8.851,14.792999999999996C7.200000000000001,14.319999999999995,6.191000000000001,13.457999999999995,5.8420000000000005,12.301999999999996C5.726000000000001,11.919999999999996,5.708,11.938999999999997,6.098000000000001,11.839999999999996C6.478000000000001,11.742999999999997,6.968000000000001,11.691999999999997,7.407000000000001,11.669999999999996C6.11,10.88,5.336,9.917,5.139,8.852C4.953,7.846,5.144,8.104000000000001,5.897,8.392C9.263,9.68,12.619,11.062,14.605,13.11L14.605,13.11Z" />
+      </svg>
+    </a>
+  </li>
+  
+</ul>
+
+<script src="/javascripts/application.js"></script>
+
+<script>var disqus_shortname="bleedfly",disqus_identifier=disqus_url="http://bleedfly.com/blog/ec2-openvpn.html",disqus_script="embed.js";(function(){var a=document.createElement("script");a.async=!0,a.src="http://"+disqus_shortname+".disqus.com/"+disqus_script,document.getElementsByTagName("head")[0].appendChild(a)})()</script>
+<iframe src="/offline-cache.html" style="display:none"></iframe>
+</body>
+</html>
